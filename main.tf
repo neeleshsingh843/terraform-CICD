@@ -4,7 +4,7 @@ resource "aws_instance" "name" {
     key_name = "mykp2"
     
     tags = {
-        Name = gitsource
+        Name = "gitsource"
     }  
 }
 
