@@ -9,24 +9,18 @@ pipeline {
         }
         stage('stage2') {
             steps {
-                dir('DAY-2') {
                 sh "terraform init"
-                }
             }
         }
         stage('stage3') {
             steps {
-                 dir('DAY-2') {
                 sh "terraform plan"
-                 }
             }
         }
         stage('action') {
             steps {
-                 dir('DAY-2') {
-                sh "terraform ${action} -auto-approve "
+                  sh "terraform ${action} -auto-approve "
                  }
-            }
         }
     }
 }
